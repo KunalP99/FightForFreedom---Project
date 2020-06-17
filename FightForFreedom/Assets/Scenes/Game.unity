@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1522342376}
+  speedOffset: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.126811
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -231,10 +232,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275504344223559912, guid: 98952831abf2cca4f95825e64a1c0cf0,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1275504344223559913, guid: 98952831abf2cca4f95825e64a1c0cf0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1275504344223559913, guid: 98952831abf2cca4f95825e64a1c0cf0,
         type: 3}
@@ -291,6 +297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyV1
       objectReference: {fileID: 0}
+    - target: {fileID: 1275504344223559925, guid: 98952831abf2cca4f95825e64a1c0cf0,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98952831abf2cca4f95825e64a1c0cf0, type: 3}
 --- !u!1001 &1860412727681610741
@@ -305,6 +316,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1860412726274640688, guid: 31479ddf13a83364a9c3b9edb807c7e8,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1860412726274640689, guid: 31479ddf13a83364a9c3b9edb807c7e8,
         type: 3}
       propertyPath: m_Name
@@ -314,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860412726274640690, guid: 31479ddf13a83364a9c3b9edb807c7e8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1860412726274640691, guid: 31479ddf13a83364a9c3b9edb807c7e8,
         type: 3}
