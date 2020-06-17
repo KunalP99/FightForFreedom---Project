@@ -26,6 +26,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() //when dealing with physics (Rigidbody2d) used fixed update otherwise use update
     {
         //Movement
-        rigid.MovePosition(rigid.position + movement * moveSpeed * Time.deltaTime);
+        rigid.MovePosition(rigid.position + movement * moveSpeed * Time.deltaTime);   
     }
 }

@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //sets the float based on where the players position is
+        //sets the float in the animator based on where the players position is
         animator.SetFloat("Horizontal", player.position.x);
         animator.SetFloat("Vertical", player.position.y);
         animator.SetFloat("Speed", moveSpeed);
@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
         //move the enemy towards the player
         if (Vector2.Distance(transform.position, player.position) > 1)
         {
+            //moves from original position to the player position at the move speed set in the inspector * time, so different speed computers runs the game normally
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
        
