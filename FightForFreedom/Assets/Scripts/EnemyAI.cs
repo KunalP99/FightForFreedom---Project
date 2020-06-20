@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     private Transform player;
+
     public float moveSpeed;
     public Animator animator;
+    public Rigidbody2D rigid;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +26,17 @@ public class EnemyAI : MonoBehaviour
         animator.SetFloat("Speed", moveSpeed);
 
         //move the enemy towards the player
-        if (Vector2.Distance(transform.position, player.position) > 0.5)
-        {
-            //moves from original position to the player position at the move speed set in the inspector * time, so different speed computers runs the game normally
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        }
-       
-        
-    }    
+        if (Vector2.Distance(rigid.transform.position, player.position) > 0)
+       {
+           //moves from original position to the player position at the move speed set in the inspector * time, so different speed computers runs the game normally
+           rigid.transform.position = Vector2.MoveTowards(rigid.transform.position, player.position, moveSpeed * Time.deltaTime);
+       }
+   
+    }
+
+    void FollowPlayer()
+    {
+
+    }
 
 }

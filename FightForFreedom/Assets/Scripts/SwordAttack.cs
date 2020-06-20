@@ -38,7 +38,7 @@ public class SwordAttack : MonoBehaviour
 
     void AttackLeft()
     {
-
+        animator.SetTrigger("LeftAttack");
     }
 
     void AttackUp()
@@ -47,15 +47,7 @@ public class SwordAttack : MonoBehaviour
     }
     void AttackDown()
     {
-
-    }
-    
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Enemy")
-        {
-            Destroy(other.gameObject);
-        }
+        animator.SetTrigger("DownAttack");
     }
 
 }
