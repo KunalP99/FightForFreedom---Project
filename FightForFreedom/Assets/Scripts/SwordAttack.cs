@@ -1,33 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
     public Animator animator;
-
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
-    public LayerMask enemyLayers;
+    public float attackSpeed;
+    float timeBtwAttack;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //Time.time is the amount of seconds since application started
+        if (Input.GetKeyDown(KeyCode.RightArrow) && Time.time > timeBtwAttack)
         {
             AttackRight();
+            //determines how quick character can attack as at this point in time, timeBtwAttack is 1 second longer then Time.time 
+            timeBtwAttack = Time.time + attackSpeed;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > timeBtwAttack)
         {
             AttackLeft();
+            timeBtwAttack = Time.time + attackSpeed;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && Time.time > timeBtwAttack)
         {
             AttackUp();
+            timeBtwAttack = Time.time + attackSpeed;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && Time.time > timeBtwAttack)
         {
             AttackDown();
+            timeBtwAttack = Time.time + attackSpeed;
         }
     }
 
