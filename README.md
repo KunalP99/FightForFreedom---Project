@@ -11,6 +11,7 @@ Rumours reached the emperor that a strange man with telekinetic powers has been 
 The sword is constantly floating around the player. Using the arrow keys, determine where the player is attacking. Depending on what sword he has a different ability can be activated. Player can press "Special ability" button that will play an animation. For a standard sword, it will simply go around the player hitting all nearby enemies. Swords spawn randomly in the arena. Each sword has a durability so the player can’t overuse one type of sword except for the standard sword.
 
 Does the player start off with a standard sword? - Yes
+
 ~Can the player pick a sword back up once thrown? (Swords only have a few uses then breaks)~
 ~Maybe the player always has a standard sword that he MUST melee with but once he picks up another sword, the standard sword switches and he can throw or do whatever with the new sword.~
 
