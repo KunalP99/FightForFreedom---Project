@@ -16,7 +16,7 @@ public class SwordAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow) && Time.time > timeBtwAttack)
         {
             AttackRight();
-            //determines how quick character can attack as at this point in time, timeBtwAttack is 1 second longer then Time.time 
+            //determines how quick character can attack as at this point in time, timeBtwAttack is 1 second longer then Time.time and after 1 second Time.time becomes longer
             timeBtwAttack = Time.time + attackSpeed;
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > timeBtwAttack)
