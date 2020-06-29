@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         //finds object tagged with "player" and gets the transform component
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>(); 
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
